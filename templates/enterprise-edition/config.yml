@@ -1,6 +1,6 @@
 name: OctoPerf Enterprise-Edition
 description: |
-  Load Testing Tool
+  Load Testing Tool for Web and Mobile Applications
 version: 1.0.0
 category: Load Testing Tools
 maintainer: Jerome Loisel
