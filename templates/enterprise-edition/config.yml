@@ -1,8 +1,8 @@
 name: OctoPerf Enterprise-Edition
 description: |
-  On-Premise Load Testing Tool
-version: 6.4.3
-category: load-testing
+  Load Testing Tool
+version: 1.0.0
+category: Load Testing Tools
 maintainer: Jerome Loisel
-license: Proprietary
+license: Copyright OctoPerf - All Rights Reserved
 projectURL: https://octoperf.com
