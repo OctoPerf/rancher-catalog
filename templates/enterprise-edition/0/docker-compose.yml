@@ -35,6 +35,8 @@ services:
     tty: true
     labels:
       io.rancher.container.pull_image: always
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
     volumes:
       - /root/data
       - /root/config
