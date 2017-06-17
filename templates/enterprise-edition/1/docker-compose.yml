@@ -16,6 +16,9 @@ services:
       - 9300:9300/tcp
     labels:
       io.rancher.container.pull_image: always
+    volumes:
+      - /usr/share/elasticsearch/data
+      - /usr/share/elasticsearch/config
   enterprise-ui:
     image: octoperf/enterprise-ui:6.4.3
     stdin_open: true
@@ -31,6 +34,10 @@ services:
     tty: true
     labels:
       io.rancher.container.pull_image: always
+    volumes:
+      - /root/data
+      - /root/config
+      - /root/license
   load-balancer:
     image: rancher/lb-service-haproxy:v0.7.5
     ports:
