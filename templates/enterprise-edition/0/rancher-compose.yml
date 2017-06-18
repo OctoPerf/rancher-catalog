@@ -4,13 +4,6 @@ catalog:
   version: 6.4.3
   minimum_rancher_version: v1.6.0
   maximum_rancher_version: v1.6.99
-  questions:
-    - variable: RANCHER_HOSTNAME
-      label: Rancher Server Hostname
-      description: "Rancher Server IP or Hostname. Example: 10.0.2.15, rancher.mycompany.com."
-      default: 
-      required: true
-      type: string
 
 services:
   elasticsearch:
