@@ -26,7 +26,7 @@ services:
     labels:
       io.rancher.container.pull_image: always
   enterprise-edition:
-    image: octoperf/enterprise-edition:6.4.3
+    image: octoperf/enterprise-edition:6.4.4
     environment:
       elasticsearch.hostname: elasticsearch
       JAVA_OPTS: -Xmx256m
