@@ -20,13 +20,13 @@ services:
       - /usr/share/elasticsearch/data
       - /usr/share/elasticsearch/config
   enterprise-ui:
-    image: octoperf/enterprise-ui:6.4.3
+    image: octoperf/enterprise-ui:6.4.6
     stdin_open: true
     tty: true
     labels:
       io.rancher.container.pull_image: always
   enterprise-edition:
-    image: octoperf/enterprise-edition:6.4.5
+    image: octoperf/enterprise-edition:6.4.6
     environment:
       elasticsearch.hostname: elasticsearch
       JAVA_OPTS: -Xmx256m
