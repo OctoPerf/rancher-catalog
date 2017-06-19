@@ -33,6 +33,7 @@ services:
       rancher.project: ${RANCHER_ENVIRONMENT}
       rancher.access-key: ${RANCHER_ACCESS_KEY}
       rancher.secret-key: ${RANCHER_SECRET_KEY}
+      server.hostname: ${BACKEND_HOSTNAME}
     stdin_open: true
     tty: true
     labels:
