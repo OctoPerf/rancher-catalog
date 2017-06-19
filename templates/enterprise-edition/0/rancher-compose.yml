@@ -26,7 +26,7 @@ catalog:
     - variable: BACKEND_HOSTNAME
       label: Server Hostname
       description: "Either Public or Private Hostname / IP accessible from load-generators. Example: 192.168.0.10, octoperf.mycompany.com."
-      default: Default
+      default: 
       required: true
       type: string
 
