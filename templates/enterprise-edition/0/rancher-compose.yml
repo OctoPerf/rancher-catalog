@@ -6,14 +6,14 @@ catalog:
   maximum_rancher_version: v1.6.99
   questions:
     - variable: RANCHER_ACCESS_KEY
-      label: Rancher Access-Key
-      description: Account Access-Key when Rancher is secured. Leave empty if none required.
+      label: Rancher API Access-Key
+      description: Account API Key (Access-Key) when Rancher is secured. Leave empty if none required.
       default: 
       required: false
       type: string
     - variable: RANCHER_SECRET_KEY
-      label: Rancher Secret-Key
-      description: Account Secret-Key when Rancher is secured. Leave empty if none required.
+      label: Rancher API Secret-Key
+      description: Account API Key (Secret-Key) when Rancher is secured. Leave empty if none required.
       default: 
       required: false
       type: string
