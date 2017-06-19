@@ -4,6 +4,25 @@ catalog:
   version: 6.4.3
   minimum_rancher_version: v1.6.0
   maximum_rancher_version: v1.6.99
+  questions:
+    - variable: RANCHER_ENVIRONMENT
+      label: Rancher Environment
+      description: Rancher Environment used to run load tests.
+      default: Default
+      required: true
+      type: string
+    - variable: RANCHER_ACCESS_KEY
+      label: Rancher Access-Key
+      description: Account Access-Key when Rancher is secured. Leave empty if none required.
+      default: 
+      required: false
+      type: string
+    - variable: RANCHER_SECRET_KEY
+      label: Rancher Secret-Key
+      description: Account Secret-Key when Rancher is secured. Leave empty if none required.
+      default: 
+      required: false
+      type: string
 
 services:
   elasticsearch:

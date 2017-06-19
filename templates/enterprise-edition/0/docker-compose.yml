@@ -26,10 +26,13 @@ services:
     labels:
       io.rancher.container.pull_image: always
   enterprise-edition:
-    image: octoperf/enterprise-edition:6.4.4
+    image: octoperf/enterprise-edition:6.4.5
     environment:
       elasticsearch.hostname: elasticsearch
       JAVA_OPTS: -Xmx256m
+      rancher.project: ${RANCHER_ENVIRONMENT}
+      rancher.access-key: ${RANCHER_ACCESS_KEY}
+      rancher.secret-key: ${RANCHER_SECRET_KEY}
     stdin_open: true
     tty: true
     labels:
