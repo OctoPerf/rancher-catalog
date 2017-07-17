@@ -18,7 +18,6 @@ services:
       io.rancher.container.pull_image: always
     volumes:
       - elasticsearch-data:/usr/share/elasticsearch/data
-      - elasticsearch-data:/usr/share/elasticsearch/config
   enterprise-ui:
     image: octoperf/enterprise-ui:6.4.7
     stdin_open: true
