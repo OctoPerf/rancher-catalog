@@ -1,7 +1,7 @@
 version: '2'
 catalog:
   name: OctoPerf Enterprise-Edition
-  version: 6.4.6
+  version: 7.0.2
   minimum_rancher_version: v1.6.0
   maximum_rancher_version: v1.6.99
   questions:
@@ -25,7 +25,7 @@ catalog:
       type: string
     - variable: BACKEND_HOSTNAME
       label: Server Hostname
-      description: "Either Public or Private Hostname / IP accessible from load-generators. Example: 192.168.0.10, octoperf.mycompany.com."
+      description: "Either Public or Private Hostname / IP accessible from load-generators. Examples: 192.168.0.10, octoperf.mycompany.com."
       default: 
       required: true
       type: string
