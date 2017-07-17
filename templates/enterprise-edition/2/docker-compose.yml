@@ -52,7 +52,6 @@ services:
 ## Do not change below. Could cause data loss in upgrade.
   elasticsearch-data:
     image: busybox
-    network_mode: none
     command: /bin/true
     labels:
       io.rancher.container.start_once: 'true'
@@ -61,7 +60,6 @@ services:
       - /usr/share/elasticsearch/config
   octoperf-data:
     image: busybox
-    network_mode: none
     command: /bin/true
     labels:
       io.rancher.container.start_once: 'true'
