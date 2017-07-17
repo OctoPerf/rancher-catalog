@@ -33,6 +33,7 @@ services:
       - 9300:9300/tcp
     labels:
       io.rancher.container.pull_image: always
+      io.rancher.sidekicks: elasticsearch-data
     volumes_from:
       - elasticsearch-data
   enterprise-ui:
@@ -56,6 +57,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
+      io.rancher.sidekicks: octoperf-data
     volumes_from:
       - octoperf-data
   load-balancer:
