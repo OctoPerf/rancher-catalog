@@ -17,8 +17,8 @@ services:
     labels:
       io.rancher.container.pull_image: always
     volumes:
-      - /usr/share/elasticsearch/data
-      - /usr/share/elasticsearch/config
+      - elasticsearch-data:/usr/share/elasticsearch/data
+      - elasticsearch-data:/usr/share/elasticsearch/config
   enterprise-ui:
     image: octoperf/enterprise-ui:7.0.0
     stdin_open: true
@@ -51,3 +51,7 @@ services:
     labels:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
+      
+volumes:
+  elasticsearch-data:
+    driver: local
