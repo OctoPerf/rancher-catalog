@@ -19,13 +19,13 @@ services:
     volumes:
       - elasticsearch-data:/usr/share/elasticsearch/data
   enterprise-ui:
-    image: octoperf/enterprise-ui:7.0.0
+    image: octoperf/enterprise-ui:7.0.1
     stdin_open: true
     tty: true
     labels:
       io.rancher.container.pull_image: always
   enterprise-edition:
-    image: octoperf/enterprise-edition:7.0.0
+    image: octoperf/enterprise-edition:7.0.1
     environment:
       elasticsearch.hostname: elasticsearch
       JAVA_OPTS: -Xmx256m
