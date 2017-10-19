@@ -30,13 +30,13 @@ catalog:
       required: true
       type: string
     - variable: OCTOPERF_DATA
-      label: OctoPerf Data Volume
+      label: OctoPerf Data Location
       description: "Warning: any change may result in data loss. By default, octoperf-data local volume. Example: /home/ubuntu/octoperf/data."
       default: octoperf-data
       required: true
       type: string
     - variable: ELASTICSEARCH_DATA
-      label: Elasticsearch Data
+      label: Elasticsearch Data Location
       description: "Warning: any change may result in data loss. By default, elasticsearch-data local volume. Example: /home/ubuntu/octoperf/elasticsearch."
       default: elasticsearch-data
       required: true
