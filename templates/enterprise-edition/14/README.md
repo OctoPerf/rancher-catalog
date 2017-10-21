@@ -6,4 +6,4 @@ OctoPerf provides a complete **load testing service** for web and mobile applica
 
 ### Bug Fixes
 
-- HTTP Query Parameters with only name are'nt within the JMX Script
+- HTTP Query Parameters with only name aren't within the JMX Script
