@@ -2,9 +2,9 @@
 
 OctoPerf provides a complete **load testing service** for web and mobile applications. Simulate thousands of users browsing through your application.
 
-## 7.4.0 (17th November 2017)
+## 7.4.0 (17th November 2017)
 
-### Enhancements
+### Enhancements
 
 - OctoPerf SLA : Service Level Agreement profiles are configurable in the Design / Monitoring and visible in the test reports.
 - Load Injector monitoring : added threshold alarms when CPU usage is over 80%.
@@ -17,7 +17,7 @@ OctoPerf provides a complete **load testing service** for web and mobile applica
 - Test report summary : to quickly navigate in the report, a summary is displayed on the right.
 - ElasticSearch upgrade to version 5.6.4.
 
-### Bug Fixes
+### Bug Fixes
 
 - Correlation rules injections 'with name' field is left to an empty string when it is cleared.
 - The displayed number of items currently in the trash is wrong after an action is dropped back into the Virtual User.
