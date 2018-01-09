@@ -1,7 +1,7 @@
 version: '2'
 catalog:
   name: OctoPerf Enterprise-Edition
-  version: 7.5.2
+  version: 8.0.0-beta1
   minimum_rancher_version: v1.6.0
   maximum_rancher_version: v1.6.99
   questions:

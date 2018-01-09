@@ -1,10 +1,9 @@
 # OctoPerf Enterprise-Edition
 
-**WARNING**: This is a beta version. Not recommended for production use.
+OctoPerf provides a complete **load testing service** for web and mobile applications. Simulate thousands of users browsing through your application.
 
-## 8.0.0 Beta 1 (9th January 2018)
+## 7.5.2 (19th December 2017)
 
-### Enhancements
+### Bug Fixes
 
-- Test Results Comparison
-- Elasticsearch 6.1.1
+- Latest Chrome Browser HARs are imported in reversed chronological order (#499)
