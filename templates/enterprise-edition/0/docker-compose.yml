@@ -11,13 +11,13 @@ services:
     volumes:
       - ${ELASTICSEARCH_DATA}:/usr/share/elasticsearch/data
   enterprise-ui:
-    image: octoperf/enterprise-ui:8.0.0
+    image: octoperf/enterprise-ui:8.0.0-beta1
     stdin_open: true
     tty: true
     labels:
       io.rancher.container.pull_image: always
   enterprise-edition:
-    image: octoperf/enterprise-edition:8.0.0
+    image: octoperf/enterprise-edition:8.0.0-beta1
     environment:
       elasticsearch.hostname: elasticsearch
       rancher.project: ${RANCHER_ENVIRONMENT}

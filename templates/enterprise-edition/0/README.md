@@ -2,7 +2,7 @@
 
 **WARNING**: This is a beta version. Not recommended for production use.
 
-## 8.0.0 Beta (9th January 2018)
+## 8.0.0 Beta 1 (9th January 2018)
 
 ### Enhancements
 
