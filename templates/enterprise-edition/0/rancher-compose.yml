@@ -1,7 +1,7 @@
 version: '2'
 catalog:
   name: OctoPerf Enterprise-Edition
-  version: 7.0.2
+  version: 7.5.2
   minimum_rancher_version: v1.6.0
   maximum_rancher_version: v1.6.99
   questions:
@@ -27,6 +27,30 @@ catalog:
       label: Server Hostname
       description: "Either Public or Private Hostname / IP accessible from load-generators. Examples: 192.168.0.10, octoperf.mycompany.com."
       default: 
+      required: true
+      type: string
+    - variable: OCTOPERF_DATA
+      label: OctoPerf Data Location
+      description: "Warning: any change may result in data loss. By default, octoperf-data local volume. Example: /home/ubuntu/octoperf/data."
+      default: octoperf-data
+      required: true
+      type: string
+    - variable: ELASTICSEARCH_DATA
+      label: Elasticsearch Data Location
+      description: "Warning: any change may result in data loss. By default, elasticsearch-data local volume. Example: /home/ubuntu/octoperf/elasticsearch."
+      default: elasticsearch-data
+      required: true
+      type: string
+    - variable: OCTOPERF_LICENSE
+      label: OctoPerf License Location
+      description: "Where is the License located? octoperf-data volume by default. Example: /home/ubuntu/octoperf/license."
+      default: octoperf-data
+      required: true
+      type: string
+    - variable: OCTOPERF_CONFIG
+      label: OctoPerf Config Location
+      description: "Where is the backend config folder? octoperf-data volume by default. Example: /home/ubuntu/octoperf/config."
+      default: octoperf-data
       required: true
       type: string
 

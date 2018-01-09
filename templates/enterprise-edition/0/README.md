@@ -1,11 +1,10 @@
-## OctoPerf Enterprise-Edition
+# OctoPerf Enterprise-Edition
 
-OctoPerf provides a complete **load testing service** for web and mobile applications. Simulate thousands of users browsing through your application.
+**WARNING**: This is a beta version. Not recommended for production use.
 
-### Key Features
+## 8.0.0 Beta (9th January 2018)
 
-- Full JMeter Support
-- Codeless Scripting Engine
-- Team Friendly
-- Free & Unlimited Monitoring
-- Live Customizable Analysis Reports
+### Enhancements
+
+- Test Results Comparison
+- Elasticsearch 6.1.1
