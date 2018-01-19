@@ -1,8 +1,8 @@
 # OctoPerf Enterprise-Edition
 
-**WARNING**: This is a beta version. Not recommended for production use.
+**WARNING**: Please read our [migration guide](https://doc.octoperf.com/enterprise-edition/migration/) before proceeding if you upgrade from a previous version.
 
-## 8.0.0 Beta 2 (12th January 2018)
+## 8.0.0 (19th January 2018)
 
 ### Enhancements
 
