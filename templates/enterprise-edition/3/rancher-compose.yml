@@ -70,6 +70,10 @@ services:
     start_on_create: true
     lb_config:
       certs: []
+      config: |-
+        defaults
+        compression algo gzip
+        compression type application/json text/html text/plain
       port_rules:
       - hostname: ''
         path: /app
