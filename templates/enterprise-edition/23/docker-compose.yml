@@ -1,0 +1,58 @@
+version: '2'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.1
+    environment:
+      transport.host: 0.0.0.0
+    stdin_open: true
+    tty: true
+    ports:
+      - 9200:9200/tcp
+      - 9300:9300/tcp
+    labels:
+      io.rancher.container.pull_image: always
+    volumes:
+      - ${ELASTICSEARCH_DATA}:/usr/share/elasticsearch/data
+  enterprise-ui:
+    image: octoperf/enterprise-ui:8.2.0
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  enterprise-documentation:
+    image: octoperf/enterprise-documentation:8.2.0
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  enterprise-edition:
+    image: octoperf/enterprise-edition:8.2.0
+    environment:
+      elasticsearch.hostname: elasticsearch
+      rancher.project: ${RANCHER_ENVIRONMENT}
+      rancher.access-key: ${RANCHER_ACCESS_KEY}
+      rancher.secret-key: ${RANCHER_SECRET_KEY}
+      server.hostname: ${BACKEND_HOSTNAME}
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+    volumes:
+      - ${OCTOPERF_DATA}:/root/data
+      - ${OCTOPERF_CONFIG}:/root/config
+      - ${OCTOPERF_LICENSE}:/root/license
+  load-balancer:
+    image: rancher/lb-service-haproxy:v0.7.15
+    ports:
+      - 8090:8090/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+      
+volumes:
+  elasticsearch-data:
+    driver: local
+  octoperf-data:
+    driver: local
