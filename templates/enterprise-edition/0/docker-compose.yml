@@ -31,7 +31,6 @@ services:
       elasticsearch.hostname: elasticsearch
       server.hostname: ${BACKEND_HOSTNAME}
       server.port: ${BACKEND_PORT}
-      server.use-forward-headers: true
     stdin_open: true
     tty: true
     labels:
