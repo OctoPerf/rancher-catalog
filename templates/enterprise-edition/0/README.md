@@ -1,9 +1,9 @@
 # OctoPerf Enterprise-Edition
 
-OctoPerf provides a complete **load testing service** for web and mobile applications. Simulate thousands of users browsing through your application.
-
-## 7.5.2 (19th December 2017)
+## 8.3.0 (19th April 2018)
 
 ### Bug Fixes
 
-- Latest Chrome Browser HARs are imported in reversed chronological order (#499)
+- Upgrade to Spring Boot 2, Elasticsearch 6.2.3 and other various libraries (#586)
+- Parse `${__P(name,value)}` variable on JMX import (#601)
+- CSV File splitting is not working properly when column names inside as first line (#603)
