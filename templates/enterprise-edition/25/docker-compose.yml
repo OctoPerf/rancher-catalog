@@ -6,9 +6,6 @@ services:
       transport.host: 0.0.0.0
     stdin_open: true
     tty: true
-    ports:
-      - 9200:9200/tcp
-      - 9300:9300/tcp
     labels:
       io.rancher.container.pull_image: always
     volumes:
