@@ -1,0 +1,51 @@
+version: '2'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
+    environment:
+      transport.host: 0.0.0.0
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+    volumes:
+      - ${ELASTICSEARCH_DATA}:/usr/share/elasticsearch/data
+  enterprise-ui:
+    image: octoperf/enterprise-ui:9.1.0
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  enterprise-documentation:
+    image: octoperf/enterprise-documentation:9.1.0
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  enterprise-edition:
+    image: octoperf/enterprise-edition:9.1.0
+    environment:
+      elasticsearch.hostname: elasticsearch
+      server.hostname: ${BACKEND_HOSTNAME}
+      server.port: ${BACKEND_PORT}
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+    volumes:
+      - ${OCTOPERF_DATA}:/root/data
+      - ${OCTOPERF_CONFIG}:/root/config
+      - ${OCTOPERF_LICENSE}:/root/license
+  load-balancer:
+    image: rancher/lb-service-haproxy:v0.9.1
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+      
+volumes:
+  elasticsearch-data:
+    driver: local
+  octoperf-data:
+    driver: local
